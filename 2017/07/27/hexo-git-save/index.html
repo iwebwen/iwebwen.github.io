@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Duke&#39;s Blog</title>
+  <title>hexo,git使用备份 | Duke&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="毕业于大学，工作于社会。生活在星球上，工程师一名。专业C++。此为博客一枚。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Duke&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="hexo部署的关键点 搭建和部署过程中出现的问题   hexo deploy 部署报错：npm install hexo-deployer-git –save 需要重新部署该 安装json-content，用于生成静态站点数据，提供搜索功能的数据源：npm install hexo-generator-json-content –save 开启标签页：hexo new page tags 安装le">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo,git使用备份">
+<meta property="og:url" content="http://yoursite.com/2017/07/27/hexo-git-save/index.html">
 <meta property="og:site_name" content="Duke&#39;s Blog">
-<meta property="og:description" content="毕业于大学，工作于社会。生活在星球上，工程师一名。专业C++。此为博客一枚。">
+<meta property="og:description" content="hexo部署的关键点 搭建和部署过程中出现的问题   hexo deploy 部署报错：npm install hexo-deployer-git –save 需要重新部署该 安装json-content，用于生成静态站点数据，提供搜索功能的数据源：npm install hexo-generator-json-content –save 开启标签页：hexo new page tags 安装le">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-07-27T08:16:26.669Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Duke&#39;s Blog">
-<meta name="twitter:description" content="毕业于大学，工作于社会。生活在星球上，工程师一名。专业C++。此为博客一枚。">
+<meta name="twitter:title" content="hexo,git使用备份">
+<meta name="twitter:description" content="hexo部署的关键点 搭建和部署过程中出现的问题   hexo deploy 部署报错：npm install hexo-deployer-git –save 需要重新部署该 安装json-content，用于生成静态站点数据，提供搜索功能的数据源：npm install hexo-generator-json-content –save 开启标签页：hexo new page tags 安装le">
   
     <link rel="alternative" href="/atom.xml" title="Duke&#39;s Blog" type="application/atom+xml">
   
@@ -157,140 +158,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-git-sum" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-hexo-git-save" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/27/git-sum/">Git学习总结</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/27/git-sum/" class="archive-article-date">
-  	<time datetime="2017-07-27T06:47:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-Git的一些基本概念"><a href="#1-Git的一些基本概念" class="headerlink" title="1 Git的一些基本概念"></a>1 Git的一些基本概念</h2><blockquote>
-<p>设置自己的用户名和邮箱</p>
-<pre><code>* git config –global user.name &quot;Your Name&quot;
-* git config –global user.email &quot;you@example.com&quot;
-</code></pre></blockquote>
-<h3 id="修改到提交之间有一个缓存区"><a href="#修改到提交之间有一个缓存区" class="headerlink" title="修改到提交之间有一个缓存区"></a>修改到提交之间有一个缓存区</h3><h3 id="提交到缓存区"><a href="#提交到缓存区" class="headerlink" title="提交到缓存区"></a>提交到缓存区</h3><ul>
-<li>git add . 当前所有修改提交到缓存区，也可以单独指定</li>
-<li>git diff –cached 查看缓存区和本地仓库里的差异</li>
-<li>git diff HEAD 查看已缓存和当前的区别</li>
-<li>git diff 查看当前未缓存的和本地仓库里的区别</li>
-<li>git diff –stat 显示摘要</li>
-</ul>
-<h3 id="撤销缓存区里的一个更改，例如hello-rb-git-reset-HEAD-–-hello-rb"><a href="#撤销缓存区里的一个更改，例如hello-rb-git-reset-HEAD-–-hello-rb" class="headerlink" title="撤销缓存区里的一个更改，例如hello.rb git reset HEAD – hello.rb"></a>撤销缓存区里的一个更改，例如hello.rb git reset HEAD – hello.rb</h3><ul>
-<li>git rm file 将file从文件缓存区、本地目录中移除</li>
-<li>git rm file –cached 只从缓存区移除，保存本地目录中的<br>分支操作</li>
-<li>git branch 列出可用的分支</li>
-<li>git branch jser.me 创建jser.me分支</li>
-<li>git checkout -b jser.me 检查jser.me分支是否存在，不存在就创建，并且切换过去</li>
-<li>git branch -d jser.me 删除分支jser.me</li>
-<li>git merge 其它分支合并到当前分支</li>
-<li>git checkout -b gh-pages origin/gh-pages 检出并且设置当前分支为远程分支gh-pages<h3 id="Log查看"><a href="#Log查看" class="headerlink" title="Log查看"></a>Log查看</h3></li>
-<li>git log –oneline 紧凑查看</li>
-<li>git log –graph 图形显示</li>
-<li>git log erlang ^master 查看只在erlang分支里的修改</li>
-<li>git log –grep 正则取一个log</li>
-<li>git shortlog master 生成一个简报<h3 id="里程碑"><a href="#里程碑" class="headerlink" title="里程碑"></a>里程碑</h3></li>
-<li>git tag -a v1.0 打上v1.0<h3 id="恢复删除的文件"><a href="#恢复删除的文件" class="headerlink" title="恢复删除的文件"></a>恢复删除的文件</h3></li>
-<li>git checkout commitid – pathfile<h3 id="与人分享"><a href="#与人分享" class="headerlink" title="与人分享"></a>与人分享</h3></li>
-<li>git remote 列出远端的别名</li>
-<li>git remote add remotename remotepath 以remotename命名 remotepath</li>
-<li>git remote rm remotename 删除别名为remotename的远程仓库</li>
-<li>git fetch 只下载</li>
-<li>git pull 下载并更新</li>
-<li>git push remotename branch 推送本地分支branch到远程仓库remotename的branch分支<h3 id="一些原则"><a href="#一些原则" class="headerlink" title="一些原则"></a>一些原则</h3>新功能尽可能的开分支，但是定期合到master上来，不要把某一个分支长时间的开发 使用git-flow</li>
-</ul>
-<h3 id="Git的几个关键知识点"><a href="#Git的几个关键知识点" class="headerlink" title="Git的几个关键知识点"></a>Git的几个关键知识点</h3><blockquote>
-<p>有三种状态：</p>
-<ul>
-<li>暂存 staged</li>
-<li>修改 modify</li>
-<li>已经提交</li>
-</ul>
-</blockquote>
-<h4 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h4><p>前面状态有两列，头一列是暂存区的改动情况，如果你commit，它会提交，第二列是当前共工作区的状态，它是不会被提交的<br>冲突之后的解决<br>找到冲突的地方，手工解决，然后git add filename; git commit</p>
-<h4 id="只合并特定的分支特定文件"><a href="#只合并特定的分支特定文件" class="headerlink" title="只合并特定的分支特定文件"></a>只合并特定的分支特定文件</h4><p>使用命令 git cherry-pick #commitid<br>checkout方法 git checkout branch – filename</p>
-<h4 id="查看和远程分支的对比"><a href="#查看和远程分支的对比" class="headerlink" title="查看和远程分支的对比"></a>查看和远程分支的对比</h4><ul>
-<li>先把远程分支搞到本地 git fetch origin master:temp， </li>
-<li>从远程的origin仓库的master分支下载到本地并新建一个分支temp</li>
-<li>比较分支 git diff temp</li>
-<li>合并特定的文件，参考上面的</li>
-<li>删除无用的分支 git branch -d temp</li>
-<li>git diff</li>
-<li>只显示有对比的文件 git diff 608e120 4abe32e –name-only</li>
-<li>配合搞成压缩文件 git diff 608e120 4abe32e –name-only | xargs zip update.zip</li>
-<li>如果不是查看每个文件的详细差别，而是统计一下有哪些文件被改动，有多少行被改 动，就可以使用‘–stat’ 参数。</li>
-<li>diff指定的文件</li>
-<li>查看今天的更改</li>
-<li>git log –since=1.days<h4 id="子模块"><a href="#子模块" class="headerlink" title="子模块"></a>子模块</h4></li>
-<li>git submodule init 新拉下来的库，初始化所有的子模块</li>
-<li>git submodule add submodule-git-url local-name 给当前库添加一个子模块，路径为submodule-git-url, 文件夹名为local-name，一般我们把local-name和子模块的名字保持一致</li>
-<li>git submodule foreach some-git-command 遍历子模块，并执行some-git-command，比如批量更新所有的子模块git submodule foreach git pull origin master</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/27/git-sum/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo-git-save" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/27/hexo-git-save/">hexo,git使用备份</a>
+    <h1 class="article-title" itemprop="name">
+      hexo,git使用备份
     </h1>
   
 
@@ -331,6 +206,32 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -338,16 +239,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/27/hexo-git-save/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/27/hexo-git-save/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/07/27/git-sum/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Git学习总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/07/27/some-good-life/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">对美好生活的向往</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -362,240 +331,46 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-some-good-life" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/27/some-good-life/">对美好生活的向往</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/27/some-good-life/" class="archive-article-date">
-  	<time datetime="2017-07-27T03:43:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>古诗中往往不乏对美好生活的向往的诗句，如东晋诗人陶渊明的“采菊东篱下，悠然见南山”北宋苏东坡的“但愿人长久，千里共婵娟。”转念一想，究竟什么才是对美好生活的向往呢？﻿</p>
-<p>现代都市的繁华，车水马龙，来来往往的人群从未放慢脚步，如同行尸走肉般。他们看不见街道旁那些绿色小生命在砖缝之间奋力生长；他们看不见黑夜中的繁星在闪耀着光芒；他们甚至看不见自己，看不见自己的心灵，看不清自己的灵魂，看不透自己的思想。他们甚至忘了自己曾经的那份对美好生活的向往。</p>
-<p>老舍先生的骆驼祥子便是一个典型的例子。之前的祥子勇敢，勤奋，善良，顽强。经历过三起三落的他，如同坠入地狱。贪婪，自私，麻木不仁。为何他会这样呢，因为他失去了一样东西，一样能使他奋进的力量——对美好生活的向往。因为社会的压迫，使他彻底地放弃了。同样的，现在的大多数人又何尝不是这样呢？生活的压力，情感的烦恼，家人的矛盾，让我们无法用一种豁达的方式去面对，久而久之，反倒拥有了这样一种心态“那就这样吧。”</p>
-<p>有人在泥泞中挣扎，挣扎了很久也没用，于是“那就这样吧”。有人在考试次次失败后，丧失希望，于是“那就这样吧。”有人在极力攀登，望着仍然触手难及的山峰，于是 “那就这样吧。”</p>
-<p>人一旦满足于现状，就难以去追求。为何不停下自己的脚步，轻装上阵，换另一个种心态去面对呢？人最幸福的是，就是对美好的生活充满向往。这份向往，宛如枯街巷里的灯，照亮你前方的道路。</p>
-<p>作者：枯街深巷里的灯<br>链接：<a href="http://www.jianshu.com/p/4cd71ad8860c" target="_blank" rel="external">http://www.jianshu.com/p/4cd71ad8860c</a><br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">美好,生活</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/27/some-good-life/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo部署的关键点"><span class="toc-number">1.</span> <span class="toc-text">hexo部署的关键点</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-all-in-life" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/27/all-in-life/">我们都是在大都市里生活的人</a>
-    </h1>
   
 
-        
-        <a href="/2017/07/27/all-in-life/" class="archive-article-date">
-  	<time datetime="2017-07-27T01:56:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>据说一篇《北京，有2000万人假装在生活》的文章火了，我觉得很奇怪。<br>昨天有人给我推荐了这篇，说是写得好，我看到中间写“南城土豪有五套房”就看不下去了，我反正没有，也不认识有五套房的土豪，所以我想这人文章没必要接着看了，我又不傻。<br>但是居然火了，而且有人说写得好，着就让我很意外了，哪好？</p>
-<p>为了研究这个问题，我专程又耐着性子把这篇絮絮叨叨的文字看完，大概明白了这里边的猫腻：作者大量使用了偷换概念的方式，试图用毒鸡汤来黑北京的同时去迎合一些对北京心怀怨念的人士，这或许是有些人认为写的好的根本原因。但很可惜，一碗毒鸡汤黑不了2000人的北京城。</p>
-<p>不得不承认的是，这位作者在偷换概念方面是一个高手，这个技巧足以蒙住80%缺心眼的人士，而我的智力正常，所以没能欣赏，有时候我也为此感到遗憾。<br>比如这个标题，就是个典型的偷换概念。<br>我不否认这个城市有人过的浑浑噩噩，但是“有2000万人假装在生活”？这未免太扯了，如果说“2000万人有些在假装生活”，或许还差不太多，这个语法错误我在小学五年级之后就没看见有北京人犯过了，或许是我接触的外地人士太少的缘故。</p>
-<p>至于某些用偷换概念泼洒毒鸡汤的家伙，你只会看见一辈辈北京人站在这片土地上，他们哪怕没房、没车、没钱，但他们仍然有那股精气神，仍然是你永远不可能俯视的族群，仍然过着你理解不了的生活，因为这股精气神是北京人独有的。<br>你没有，没关系，端着你的毒鸡汤一边玩去。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">北京,生活,流浪</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/27/all-in-life/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/26/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2017/07/26/hello-world/" class="archive-article-date">
-  	<time datetime="2017-07-26T09:56:21.161Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/26/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
 
@@ -618,8 +393,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
